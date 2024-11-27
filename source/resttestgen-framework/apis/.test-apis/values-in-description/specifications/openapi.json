@@ -1,0 +1,49 @@
+{
+  "openapi": "3.0.1",
+  "servers": [
+    {
+      "url": "http://localhost:8080"
+    }
+  ],
+  "info": {
+    "title": "OpenAPI with values in parameter descriptions",
+    "version": "1.0",
+    "description": "OpenAPI with values in parameter descriptions",
+    "contact": {
+      "name": "Davide Corradini",
+      "email": "davide.corradini@univr.it"
+    }
+  },
+  "paths": {
+    "/example": {
+      "get": {
+        "operationId": "getBooks",
+        "parameters": [
+          {
+            "name": "parameter1",
+            "description": "List of variant IDs. For example [\"rs116035550\"]",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "parameter2",
+            "description": "Values: a, b, c.",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+              "description": "The list of book has been successfully retrieved."
+          }
+        }
+      }
+    }
+  }
+}

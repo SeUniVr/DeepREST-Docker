@@ -1,0 +1,1 @@
+Test results, including reports and generated test cases, will be places in this folder.

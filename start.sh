@@ -1,0 +1,1 @@
+docker run --name deeprest --network host -v ./api:/api -v ./results:/source/resttestgen-framework/apis/api-under-test/results --privileged --rm deeprest
